@@ -3,6 +3,7 @@ define(function (require) {
     "use strict";
 
     var $                   = require('jquery'),
+    		Utilities						= require('utilities'),
         Handlebars          = require('handlebars'),
         productAdapter      = require('adapters/product'),
         userAdapter      		= require('adapters/user'),
@@ -39,20 +40,18 @@ define(function (require) {
         
         this.saveSanitationStationRecord = function (e) {
         	e.preventDefault();
-        	var log = $('form').serializeArray();
+        	var log = Utilities.stringify($('form').serializeArray());
+        	
         	log.time = $.now();
         	log.type = 'restroom_inspection';
         	var record = {log: log};
         	console.log(record);
-	        recordAdapter.save(record, userAdapter.authenticationToken())
+	        recordAdapter.save(record)
 	        	.done(function(data) {
 		      		console.log(data); 
 		      	})
-		      	.fail(function(error) {
-		      		console.log(error);			      	
-		      	})
-		      	.always(function(data) {
-			      	console.log(data);
+		      	.fail(function(jqXHR, textStatus, error) {
+		      		console.log(textStatus);			      	
 		      	});
         };
 
