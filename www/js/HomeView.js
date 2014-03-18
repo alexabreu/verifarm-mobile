@@ -51,7 +51,7 @@ define(function (require) {
 		      		console.log(data); 
 		      	})
 		      	.fail(function(jqXHR, textStatus, error) {
-		      		console.log(textStatus);			      	
+		      		console.log(error);			      	
 		      	});
         };
 
