@@ -17,7 +17,8 @@ require.config({
     shim: {
         'handlebars': {
             exports: 'Handlebars'
-        }
+        },
+        'jquery.jpanelmenu.min': ['jquery']
     }
 
 });
