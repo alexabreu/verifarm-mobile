@@ -2,10 +2,8 @@
 .snapjs-left .right-drawer {
   display: none; }
 
-.page {
-  z-index: 2; }
-
 .content {
+  background: white;
   z-index: 2;
   position: absolute;
   top: 0;
@@ -20,7 +18,14 @@
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Chrome and Safari */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer 10+ */ }
 
 .drawers {
   z-index: 1;

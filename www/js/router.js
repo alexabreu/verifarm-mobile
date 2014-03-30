@@ -14,19 +14,23 @@ define(function (require) {
         slider = new PageSlider($("body")),
         homeView = new HomeView().render(),
         menuView = new MenuView().render(),
+        lastHash = "",
 
-        route = function () {
-        	
+        route = function (e) {        
             var hash = window.location.hash,
                 view,
                 match;
-
-            if (!hash) {
-                view = homeView;
-
+            
+            if (e && hash === lastHash) {
+	            return;
             }
+            lastHash = hash;
+            
+            if (!hash) {
+                view = homeView;   
+            }
+            
 	          else {
-	
 	            match = hash.match(detailsURL);
 	            if (match) {
 	                productAdapter.findById(Number(match[1])).done(function (product) {
@@ -35,7 +39,9 @@ define(function (require) {
 	            }
             }
             
+            var title = view.$el.find('nav').text();
         		view.$el.find('nav').html(menuView.$el.find('.nav').clone());
+        		view.$el.find('nav h4').text(title);
             var snapper = new Snap({
 							  element: view.$el.find('.content')[0],
 							  addBodyClasss: true,
@@ -50,18 +56,15 @@ define(function (require) {
 					        snapper.close();
 					    } else {
 					        snapper.open('left');
-					        $(document.body).find('.page').removeClass();
 					    }
 						});
 
 						snapper.close();
-						slider.slidePage(view.$el);
-						
+						slider.slidePage(view.$el, menuView.$el.find('.menu').clone());
 						
         },
 
         start = function () {
-            $(document.body).append(menuView.$el.find('.menu').clone());
             $(window).on('hashchange', route);
             route();
             

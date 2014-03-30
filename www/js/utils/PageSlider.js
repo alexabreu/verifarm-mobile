@@ -15,8 +15,10 @@ define(function (require) {
         }
 
         // Use this function if you want PageSlider to automatically determine the sliding direction based on the state history
-        this.slidePage = function (page) {
-
+        this.slidePage = function (page, menu) {
+	        	
+	        	page.append(menu);
+	        	
             var l = stateHistory.length,
                 state = window.location.hash;
 
@@ -57,7 +59,7 @@ define(function (require) {
 
         // Use this function directly if you want to control the sliding direction outside PageSlider
         this.slidePageFrom = function (page, from) {
-
+        
             container.append(page);
 
             if (!currentPage || !from) {
