@@ -26,22 +26,6 @@ define(function (require) {
             if (!userAdapter.authenticated()) {
 	            userAdapter.getAuthenticationToken();
             }
-
-						
-						this.$el.on('click', '.menu-trigger', function(e) {
-							var snapper = new Snap({
-							  element: $('.content')[0],
-							  addBodyClasss: true,
-							  tapToClose: true,
-							  hyperextensible: true,
-							  disable: 'right'
-							});
-							if( snapper.state().state=="left" ){
-					        snapper.close();
-					    } else {
-					        snapper.open('left');
-					    }
-						});
         };
 
         this.render = function () {

@@ -2,14 +2,36 @@
 .snapjs-left .right-drawer {
   display: none; }
 
-.drawers {
+.page {
+  z-index: 2; }
+
+.content {
+  z-index: 2;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   width: auto;
-  height: auto; }
+  height: auto;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.drawers {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  width: 265px; }
   .drawers .drawer {
     position: absolute;
     top: 0;
@@ -26,23 +48,7 @@
     -o-transition: width 0.3s ease;
     transition: width 0.3s ease; }
   .drawers .drawer.left {
-    position: absolute;
-    left: 0;
-    z-index: 1; }
+    left: 0; }
 
-.content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  z-index: 2;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+.content nav .menu-trigger {
+  margin-top: 1.65em; }
