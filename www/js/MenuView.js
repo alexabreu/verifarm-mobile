@@ -4,8 +4,10 @@ define(function(require) {
 	
 	 var $                   = require('jquery'),
 	 		 Handlebars          = require('handlebars'),
+	 		 Snap 							 = require('snap'),
 	 		 menuHtml            = require('text!tpl/Menu.html'),
 	 		 menuTpl						 = Handlebars.compile(menuHtml);
+	 		 
 	 		 
 	 return function () {
 	 

@@ -12,7 +12,6 @@ define(function(require) {
 			},
 			
 			getAuthenticationToken = function(user) {
-				var user = {username: 'aabreu', password: 'password'};
 				return $.post(url+'login', user, 'json')
 					.done(function(token) {
 						authentication_token = token;

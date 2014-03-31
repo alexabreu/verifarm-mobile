@@ -7,6 +7,7 @@ define(function (require) {
         MenuView        = require("app/MenuView"),
         HomeView        = require("app/HomeView"),
         ProductView     = require("app/ProductView"),
+        LoginView     	= require("app/LoginView"),
         PageSlider      = require("app/utils/PageSlider"),
         
 
@@ -28,6 +29,9 @@ define(function (require) {
             
             if (!hash) {
                 view = homeView;   
+            }
+            else if (hash === "#sign-in") {
+	            view = new LoginView().render();
             }
             
 	          else {

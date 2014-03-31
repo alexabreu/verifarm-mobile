@@ -10,7 +10,6 @@ define(function (require) {
         recordAdapter      	= require('adapters/record'),
         homeHtml            = require('text!tpl/Home.html'),
         productListItemHtml = require('text!tpl/ProductListItem.html'),
-        Snap 								= require('snap'),
 
         homeTpl = Handlebars.compile(homeHtml),
         productListItemTpl = Handlebars.compile(productListItemHtml);
@@ -23,9 +22,6 @@ define(function (require) {
             this.$el = $('<div/>');
             this.$el.on('keyup', '.search-key', this.findByName);
             this.$el.on('submit', 'form', this.saveSanitationStationRecord);
-            if (!userAdapter.authenticated()) {
-	            userAdapter.getAuthenticationToken();
-            }
         };
 
         this.render = function () {

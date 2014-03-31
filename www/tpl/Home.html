@@ -5,18 +5,145 @@
 -->
 
 <div class="content">
-<nav>Sanitation Station</nav>
-<form>
-<div class="container">
+	<nav>Sanitation Station</nav>
 	
+	<div class="container">
+		<form role="form">
+			
+			<div class="row">
+				<h5 class="col-xs-12">Toilet & Hand Washing Facilities</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="toilet1" name="toilet1" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					</label>
+				</div>
+				
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="toilet2" name="toilet2" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Cleaned
+					</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<h5 class="col-xs-12">Soap</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="soap1" name="soap[checked]" type="checkbox" value="true">
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="soap2" name="soap2" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					</label>
+			  </div>
+			</div>
+			
+			
+			<div class="row">
+				<h5 class="col-xs-12">Paper Towels</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="towels1" name="towels1" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="towels2" name="towels2" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					</label>
+			  </div>
+			</div>
+			
+			
+			<div class="row">
+				<h5 class="col-xs-12">Toilet Paper</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="tp1" name="tp1" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="tp2" name="tp2" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					</label>
+			  </div>
+			</div>
+			
+			
+			<div class="row">
+				<h5 class="col-xs-12">Trash Can</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="trash1" name="trash1" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="trash2" name="trash2" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Emptied
+					</label>
+			  </div>
+			</div>
+			
+			
+			<div class="row">
+				<h5 class="col-xs-12">Potable Water</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="water1" name="water1" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+					  <input id="water2" name="water2" type="checkbox">
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					</label>
+			  </div>
+			</div>
+			
+			<div class="spacer col-xs-12">
+			 <hr/>
+			</div>
+			
+		
+			<input type="submit" value="Save Data" class="topcoat-button col-xs-12">
+
+				
+				<div class="clearfix visible-xs"></div>	
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<!--
+<div class="topcoat-list__container scroller" style="top:138px;">
+    <ul class='topcoat-list list product-list '></ul>
+</div>
+-->
+
+<!--
+
+	<form role="form">
 	<div class="row">
-		<h4 class="col-xs-12">Toilet & Hand Washing Facilities</h4>
+		<h5 class="col-xs-12">Toilet & Hand Washing Facilities</h5>
 		<div class="col-xs-6">
 		
 			<label class="topcoat-checkbox">Checked
 			  <input id="toilet1" name="toilet1" type="checkbox">
 			  <div class="topcoat-checkbox__checkmark"></div>
-		</label>
+			</label>
 		</div>
 		<div class="col-xs-6">
 			<label class="topcoat-checkbox">Cleaned
@@ -27,109 +154,5 @@
 	</div>
 	
 	
-	<div class="row">
-		<h4 class="col-xs-12">Soap</h4>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Checked
-			  <input id="soap1" name="soap[checked]" type="checkbox" value="true">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-		</div>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Filled
-			  <input id="soap2" name="soap2" type="checkbox">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-	  </div>
-	</div>
-	
-	
-	<div class="row">
-		<h4 class="col-xs-12">Paper Towels</h4>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Checked
-			  <input id="towels1" name="towels1" type="checkbox">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-		</div>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Filled
-			  <input id="towels2" name="towels2" type="checkbox">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-	  </div>
-	</div>
-	
-	
-	<div class="row">
-		<h4 class="col-xs-12">Toilet Paper</h4>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Checked
-			  <input id="tp1" name="tp1" type="checkbox">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-		</div>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Filled
-			  <input id="tp2" name="tp2" type="checkbox">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-	  </div>
-	</div>
-	
-	
-	<div class="row">
-		<h4 class="col-xs-12">Trash Can</h4>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Checked
-			  <input id="trash1" name="trash1" type="checkbox">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-		</div>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Emptied
-			  <input id="trash2" name="trash2" type="checkbox">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-	  </div>
-	</div>
-	
-	
-	<div class="row">
-		<h4 class="col-xs-12">Potable Water</h4>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Checked
-			  <input id="water1" name="water1" type="checkbox">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-		</div>
-		<div class="col-xs-6">
-			<label class="topcoat-checkbox">Filled
-			  <input id="water2" name="water2" type="checkbox">
-			  <div class="topcoat-checkbox__checkmark"></div>
-			</label>
-	  </div>
-	</div>
-	
-	<div class="spacer col-xs-12">
-	 <hr/>
-	</div>
-	
-
-	<input type="submit" value="Save Data" class="topcoat-button col-xs-12">
-
-</div>
-
-
-
-
-</form>
-</div>
-
-
-
-<!--
-<div class="topcoat-list__container scroller" style="top:138px;">
-    <ul class='topcoat-list list product-list '></ul>
-</div>
+	</form>
 -->

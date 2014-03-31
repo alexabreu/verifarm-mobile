@@ -56,4 +56,7 @@
     left: 0; }
 
 .content nav .menu-trigger {
-  margin-top: 1.65em; }
+  margin-top: 0.65em; }
+
+.container {
+  padding: 40px; }
