@@ -8,13 +8,14 @@ define(function(require) {
 			authentication_token = null,
 			
 			authenticationToken = function() {
-				return authentication_token;
+				return window.localStorage.getItem("authentication-token"); 
 			},
 			
 			getAuthenticationToken = function(user) {
 				return $.post(url+'login', user, 'json')
 					.done(function(token) {
 						authentication_token = token;
+						window.localStorage.setItem("authentication-token", token);
 						console.log('Successfully Authenticated!');
 					});
 			},

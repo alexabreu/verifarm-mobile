@@ -1,0 +1,27 @@
+<div class="content">
+	<nav>Sanitation Station</nav>
+
+	
+	<div class="container collection">
+		<div class="topcoat-list__container side-nav__list__container left drawer">
+				<h3 class="topcoat-list__header">All Sanitation Station Reports<a href="#sanitation_stations/new"><span class="icomatic icon pull-right">plus</span></h3>
+		    <ul class="topcoat-list side-nav__list">
+		        {{#.}}
+		        {{#if Log.log}}
+		        
+		        <li class="topcoat-list__item side-nav__list__item">
+		        		<a href="#sanitation_stations/{{this._id}}" class="side-nav__button">
+		        		<div class="row">
+		        			<div class="col-xs-4">Station Name</div>
+		        			<div class="col-xs-4">{{Log.log.time}}</div>
+		        			<div class="col-xs-2">{{User}}</div>
+		        			<div class="col-xs-2"><span class="icomatic icon pull-right">nextlight</span></div>
+		        		</div>
+		        		</a>
+		        </li>
+		        {{/if}}
+		        {{/.}}
+		    </ul>
+		</div>
+	</div>
+</div>

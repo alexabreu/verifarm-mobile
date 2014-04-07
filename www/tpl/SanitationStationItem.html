@@ -1,0 +1,170 @@
+<div class="content">
+	<nav>Sanitation Station</nav>
+	
+	<div class="container">
+		<h4>{{User}}</h4>
+		<h5>{{Log.log.time}}</h5>
+		<div class="row">
+				<h5 class="col-xs-12">Toilet & Hand Washing Facilities</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.toilet1}}
+					  <input id="toilet1" name="toilet1" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{else}}
+					  <input id="toilet1" name="toilet1" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{/if}}
+					</label>
+				</div>
+				
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.toilet2}}
+					  <input id="toilet2" name="toilet2" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Cleaned
+					  {{else}}
+					   <input id="toilet2" name="toilet2" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Cleaned
+					  {{/if}}
+					</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<h5 class="col-xs-12">Soap</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.soap1}}
+					  <input id="soap1" name="soap1" type="checkbox" value="true" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{else}}
+					  <input id="soap1" name="soap1" type="checkbox" value="true" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{/if}}
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.soap2}}
+					  <input id="soap2" name="soap2" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					  {{else}}
+					  <input id="soap2" name="soap2" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					  {{/if}}
+					</label>
+			  </div>
+			</div>
+			
+			
+			<div class="row">
+				<h5 class="col-xs-12">Paper Towels</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.towels1}}
+					  <input id="towels1" name="towels1" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{else}}
+					  <input id="towels1" name="towels1" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{/if}}
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.towels2}}
+					  <input id="towels2" name="towels2" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					  {{else}}
+					  <input id="towels2" name="towels2" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					  {{/if}}
+					</label>
+			  </div>
+			</div>
+			
+			
+			<div class="row">
+				<h5 class="col-xs-12">Toilet Paper</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.tp1}}
+					  <input id="tp1" name="tp1" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{else}}
+					  <input id="tp1" name="tp1" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{/if}}
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.tp2}}
+					  <input id="tp2" name="tp2" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					  {{else}}
+					  <input id="tp2" name="tp2" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					  {{/if}}
+					</label>
+			  </div>
+			</div>
+			
+			
+			<div class="row">
+				<h5 class="col-xs-12">Trash Can</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.trash1}}
+					  <input id="trash1" name="trash1" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{else}}
+					  <input id="trash1" name="trash1" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{/if}}
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.trash2}}
+					  <input id="trash2" name="trash2" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Emptied
+					  {{else}}
+					  <input id="trash2" name="trash2" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Emptied
+					  {{/if}}
+					</label>
+			  </div>
+			</div>
+			
+			
+			<div class="row">
+				<h5 class="col-xs-12">Potable Water</h5>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.water1}}
+					  <input id="water1" name="water1" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{else}}
+					  <input id="water1" name="water1" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Checked
+					  {{/if}}
+					</label>
+				</div>
+				<div class="col-xs-6">
+					<label class="topcoat-checkbox">
+						{{#if Log.log.water2}}
+					  <input id="water2" name="water2" type="checkbox" checked disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					  {{else}}
+					  <input id="water2" name="water2" type="checkbox" disabled>
+					  <div class="topcoat-checkbox__checkmark"></div> Filled
+					  {{/if}}
+					</label>
+			  </div>
+			</div>
+
+
+	</div>
+</div>

@@ -8,34 +8,35 @@ define(function (require) {
         productAdapter      = require('adapters/product'),
         userAdapter      		= require('adapters/user'),
         recordAdapter      	= require('adapters/record'),
-        homeHtml            = require('text!tpl/Home.html'),
         productListItemHtml = require('text!tpl/ProductListItem.html'),
+        tplText         		= require('text!tpl/SanitationStationNew.html'),
+        template 						= Handlebars.compile(tplText);
 
-        homeTpl = Handlebars.compile(homeHtml),
-        productListItemTpl = Handlebars.compile(productListItemHtml);
 
+    return Backbone.View.extend({
 
-    return function () {
+        initialize: function () {
+            this.render();
+        },
+        
+        events: {
+            "keyup .search-key":    "search",
+            "keypress .search-key": "onkeypress",
+            "submit form": "saveSanitationStationRecord"
+        },
 
-        this.initialize = function () {
-            // Define a div wrapper for the view. The div wrapper is used to attach events.
-            this.$el = $('<div/>');
-            this.$el.on('keyup', '.search-key', this.findByName);
-            this.$el.on('submit', 'form', this.saveSanitationStationRecord);
-        };
-
-        this.render = function () {
-            this.$el.html(homeTpl());
+       render: function () {
+            this.$el.html(template());
             return this;
-        };
+        },
 
-        this.findByName = function () {
+        findByName: function () {
             productAdapter.findByName($('.search-key').val()).done(function (products) {
                 $('.product-list').html(productListItemTpl(products));
             });
-        };
+        },
         
-        this.saveSanitationStationRecord = function (e) {
+        saveSanitationStationRecord: function (e) {
         	e.preventDefault();
         	var log = Utilities.stringify($('form').serializeArray());
         	
@@ -50,11 +51,9 @@ define(function (require) {
 		      	.fail(function(jqXHR, textStatus, error) {
 		      		console.log(error);			      	
 		      	});
-        };
-
-        this.initialize();
-
-    };
+        }
+        
+    });
 
 });
 

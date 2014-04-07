@@ -14,23 +14,44 @@ require.config({
             'adapters/user': 		'app/adapters/user-jsonp'
         }
     },
+    
     shim: {
         'handlebars': {
             exports: 'Handlebars'
         },
-        'jquery.jpanelmenu.min': ['jquery']
+        'underscore': {
+            exports: '_'
+        },
+        'backbone_filters': {
+	        deps: ['underscore', 'backbone']
+        },
+        'backbone': {
+            deps: ['underscore', 'jquery'],
+            exports: 'Backbone'
+        }
+        
     }
-
 });
 
-require(["fastclick", 'app/router'], function (FastClick, router) {
-
+require(['jquery', 'backbone', 'backbone_filters', "fastclick", 'app/router'], function ($, Backbone, Filters, FastClick, Router) {
+		
     "use strict";
-
+    
+    window.App = {
+    	models: {},
+    	collections: {},
+    	views: {},
+	    router:  new Router()
+    };
+    
     $(function () {
-       FastClick.attach(document.body);
+        FastClick.attach(document.body);
     });
 
-    router.start();
+    $("body").on("click", ".back-button", function (event) {
+        event.preventDefault();
+        window.history.back();
+    });
 
+    Backbone.history.start();
 });

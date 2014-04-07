@@ -3,43 +3,42 @@ define(function (require) {
     "use strict";
 
     var $                   = require('jquery'),
+    		Backbone          	= require('backbone'),
         Handlebars          = require('handlebars'),
         Utilities         	= require('utilities'),
         userAdapter      		= require('adapters/user'),
         loginHtml           = require('text!tpl/Login.html'),
 
-        loginTpl = Handlebars.compile(loginHtml);
+        template = Handlebars.compile(loginHtml);
 
 
-    return function () {
+    return Backbone.View.extend({
 
-        this.initialize = function () {
-            // Define a div wrapper for the view. The div wrapper is used to attach events.
-            this.$el = $('<div/>');
-            this.$el.on('submit', 'form', this.signIn);
-
-        };
-
-        this.render = function () {
-            this.$el.html(loginTpl());
-            return this;
-        };
-
-
+        initialize: function () {
+            this.render();
+        },
         
-        this.signIn= function (e) {
+        events: {
+        	"submit form": "signIn"
+        },
+
+        render: function () {
+            this.$el.html(template());
+            return this;
+        },
+
+        signIn: function (e) {
         	e.preventDefault();
         	var user = Utilities.stringify($('form').serializeArray());
         	userAdapter.getAuthenticationToken(user)
         		.done(function(data){
-	        		window.location.href = "#";
+        			console.log(data);
+        			Backbone.history.navigate("sanitation_stations", true);
         		});
 
-        };
+        }
 
-        this.initialize();
-
-    };
+    });
 
 });
 
